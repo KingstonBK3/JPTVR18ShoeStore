@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<h3 class="w-100 text-center ">Список игр:</h3>
+<h3 class="w-100 text-center ">Shoes list:</h3>
 <div class="form-group w-50 mx-auto">
         <c:forEach var="shoe" items="${listShoes}">
          <p>  
@@ -13,11 +13,11 @@
                 </div>    
             </div>
             <div class="form-group row w-100 mx-auto my-0">   
-                <label for="devName" class="col-sm-5 col-form-label">Brand</label>
+                <label for="brandName" class="col-sm-5 col-form-label">Brand</label>
                 <div class="col-sm-7">
-                    <input value="${shoe.devName}" class="form-control-plaintext" readonly="" type="text" id="devName" name="devName" aria-describedby="devNameHelp" 
+                    <input value="${shoe.brandName}" class="form-control-plaintext" readonly="" type="text" id="brandName" name="brandName" aria-describedby="brandNameHelp" 
                            placeholder="Enter shoe brand">
-                    <small id="devNameHelp" class="form-text text-muted"></small>
+                    <small id="brandNameHelp" class="form-text text-muted"></small>
                 </div>
             </div>
             <div class="form-group row w-100 mx-auto my-0">  

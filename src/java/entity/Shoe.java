@@ -31,9 +31,9 @@ public class Shoe implements Serializable {
     public Shoe() {
     }
 
-    public Shoe(String name, String devName, int price) {
+    public Shoe(String name, String brandName, int price) {
         this.name = name;
-        this.brandName = devName;
+        this.brandName = brandName;
         this.price = price;
     }
 

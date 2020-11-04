@@ -4,14 +4,14 @@
     <h3 class="w-100 text-center ">Shoe: ${shoe.name}</h3>
     <div class="form-group w-50 mx-auto">
         <label for="name">Shoe name</label>
-        <input  value="${shoe.id}" type="hidden" name="idResource">
+        <input  value="${shoe.id}" type="hidden" name="idShoe">
         <input  value="${shoe.name}" disabled type="text" class="form-control" id="name" name="name" aria-describedby="nameShoe" placeholder="Enter shoe name" >
         <small id="nameShoe" class="form-text text-muted"></small>
     </div>
     <div class="form-group w-50 mx-auto">    
-        <label for="url">Brand</label>
-        <input value="${shoe.devName}" disabled type="text" class="form-control" id="devName" name="devName" aria-describedby="devNameHelp" placeholder="Enter shoe brand">
-        <small id="devNameHelp" class="form-text text-muted"></small>
+        <label for="brandName">Brand</label>
+        <input value="${shoe.brandName}" disabled type="text" class="form-control" id="brandName" name="brandName" aria-describedby="brandNameHelp" placeholder="Enter shoe brand">
+        <small id="brandNameHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group w-50 mx-auto">    
         <label for="price">Price</label>

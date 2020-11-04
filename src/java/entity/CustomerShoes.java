@@ -114,7 +114,7 @@ public class CustomerShoes implements Serializable {
 
     @Override
     public String toString() {
-        return "Customershoes{" + "id=" + id + ", customer=" + customer.getLogin() + ", shoe=" + shoe.getName() + ", date=" + date.toString() + '}';
+        return "CustomerShoes{" + "id=" + id + ", customer=" + customer.getLogin() + ", shoe=" + shoe.getName() + ", date=" + date.toString() + '}';
     }
 
     

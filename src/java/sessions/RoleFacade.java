@@ -17,7 +17,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class RoleFacade extends AbstractFacade<Role> {
 
-    @PersistenceContext(unitName = "JPTVR18ShoesMarketPU")
+    @PersistenceContext(unitName = "JPTVR18ShoeStorePU")
     private EntityManager em;
 
     @Override

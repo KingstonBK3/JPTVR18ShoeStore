@@ -37,13 +37,13 @@ public class CustomerController extends HttpServlet {
     @EJB 
     private CustomerFacade customerFacade;
     @EJB
-    private RoleFacade roleFacade;
+    private RoleFacade roleFacade = new RoleFacade();
     @EJB
     private CustomerRolesFacade customerRolesFacade;
 
     @Override
     public void init() throws ServletException {
-        int countRoles = roleFacade.count();
+        int countRoles = this.roleFacade.count();
         if(countRoles > 0) return;
         MakeHash mh = new MakeHash();
         String salts = mh.createSalts();

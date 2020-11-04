@@ -18,7 +18,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class CustomerShoesFacade extends AbstractFacade<CustomerShoes> {
 
-    @PersistenceContext(unitName = "JPTVR18ShoesMarketPU")
+    @PersistenceContext(unitName = "JPTVR18ShoeStorePU")
     private EntityManager em;
 
     @Override
@@ -31,7 +31,7 @@ public class CustomerShoesFacade extends AbstractFacade<CustomerShoes> {
     }
 
     public void removeByShoe(Shoe deleteShoe) {
-       em.createQuery("DELETE FROM CustomerShoess cg WHERE cg.shoes = :shoes").setParameter("shoes",deleteShoe).executeUpdate();
+       em.createQuery("DELETE FROM CustomerShoes cg WHERE cg.shoe = :shoe").setParameter("shoe",deleteShoe).executeUpdate();
     }
     
 }

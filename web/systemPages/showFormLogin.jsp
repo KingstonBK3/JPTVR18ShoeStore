@@ -15,7 +15,7 @@
         <div class="form-group w-50 mx-auto text-center">
             <button type="submit" class="btn btn-primary w-50 mt-4">Login</button>
                 <small id="emailHelp" class="form-text text-muted">
-                   Нет логина? <a href="showFormAddCustomer">Sign up</a>
+                   Account exists? <a href="showFormAddCustomer">Sign up</a>
                 </small>
         </div>
     </form>

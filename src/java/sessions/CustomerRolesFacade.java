@@ -23,7 +23,7 @@ public class CustomerRolesFacade extends AbstractFacade<CustomerRoles> {
     @EJB
     private RoleFacade roleFacade;
 
-    @PersistenceContext(unitName = "JPTVR18ShoesMarketPU")
+    @PersistenceContext(unitName = "JPTVR18ShoeStorePU")
     private EntityManager em;
 
     @Override

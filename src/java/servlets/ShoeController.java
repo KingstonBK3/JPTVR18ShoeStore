@@ -82,15 +82,15 @@ public class ShoeController extends HttpServlet {
                     
                 case "/createShoe":
                     String name = request.getParameter("name");
-                    String devName = request.getParameter("devName");
+                    String brandName = request.getParameter("brandName");
                     int price = Integer.parseInt(request.getParameter("price"));   
-                    Shoe shoe = new Shoe (name, devName, price);
+                    Shoe shoe = new Shoe (name, brandName, price);
                     shoeFacade.create(shoe);
                     Calendar c = new GregorianCalendar();
                     CustomerShoes customerShoes = new CustomerShoes(customer, shoe, c.getTime());
                     customerShoesFacade.create(customerShoes);
                     request.setAttribute("info", "Shoe \""
-                        +shoe.getName()+"\" создана");
+                        +shoe.getName()+"\" created");
                     request.getRequestDispatcher("/index.jsp")
                         .forward(request, response);
                     break;
@@ -143,10 +143,10 @@ public class ShoeController extends HttpServlet {
                 id = request.getParameter("idShoe");
                 shoe = shoeFacade.find(Long.parseLong(id));
                 name = request.getParameter("name");               
-                devName = request.getParameter("devName");
+                brandName = request.getParameter("brandName");
                 price = Integer.parseInt(request.getParameter("price"));
                 shoe.setName(name);
-                shoe.setBrandName(devName);               
+                shoe.setBrandName(brandName);               
                 shoe.setPrice(price);
                 shoeFacade.edit(shoe);
                 request.setAttribute("shoe", shoe);

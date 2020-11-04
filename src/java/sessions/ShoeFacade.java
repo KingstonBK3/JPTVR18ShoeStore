@@ -19,7 +19,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class ShoeFacade extends AbstractFacade<Shoe> {
 
-    @PersistenceContext(unitName = "JPTVR18ShoesMarketPU")
+    @PersistenceContext(unitName = "JPTVR18ShoeStorePU")
     private EntityManager em;
 
     @Override
@@ -33,7 +33,7 @@ public class ShoeFacade extends AbstractFacade<Shoe> {
 
     public List<Shoe> findByCustomer(Customer customer) {
         try {
-            return em.createQuery("SELECT cg.shoes FROM CustomerShoess cg WHERE cg.customer = :customer").setParameter("customer", customer).getResultList();
+            return em.createQuery("SELECT cg.shoe FROM CustomerShoes cg WHERE cg.customer = :customer").setParameter("customer", customer).getResultList();
         } catch (Exception e) {
             return null;
         }

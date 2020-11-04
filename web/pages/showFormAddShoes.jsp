@@ -8,9 +8,9 @@
         <small id="nameHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group w-50 mx-auto">    
-        <label for="devName">Brand</label>
-        <input value="${devName}" type="text" class="form-control" id="devName" name="devName" aria-describedby="devNameHelp" placeholder="Brand">
-        <small id="devNameHelp" class="form-text text-muted"></small>
+        <label for="brandName">Brand</label>
+        <input value="${brandName}" type="text" class="form-control" id="brandName" name="brandName" aria-describedby="brandNameHelp" placeholder="Brand">
+        <small id="brandNameHelp" class="form-text text-muted"></small>
     </div>
     <div class="form-group w-50 mx-auto">    
         <label for="price">Price</label>
